@@ -1,26 +1,145 @@
-// variables for canvas
 let cnv;
 const canvasWidth = 800;
 const canvasHeight = 400;
-
+let rectSpeedTest;
+let rectYTest = 0;
+let rectYTestUp = 275;
 
 function setup() {
-  cnv = createCanvas(canvasWidth, canvasHeight);
-  frameRate(30);
-  dropShadowReset();
+  createCanvas(950, 1000);
+  angleMode(DEGREES);
 }
 
 function draw() {
  background(220);
+
+push();
+
+ translate(50, 0);
+ leftEye(); 
+ eyeOutline();
+ 
+pop();
   
-
-
-mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
-mangekyoSharingan(170, 230, 550, 650, 600, 145, 255);
-
-
-
   
+push();
+  
+  translate(900, 0);
+  scale(-1, 1);
+  leftEye();
+  eyeOutline();
+  
+pop();
+  
+push();
+  
+ translate(158, 173);
+ scale(0.5)
+ mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
+  
+pop();
+
+push();
+  
+ translate(600, 173);
+ scale(0.5)
+ mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
+  
+pop(); 
+
+/*
+frameRate(1);
+noStroke();
+fill(220)
+rect(0, rectYTest, 950, 275);
+rect(0, rectYTestUp, 950, 500);
+  
+rectYTest -= 35
+rectYTestUp += 35
+*/
+
+}
+
+function leftEye() {
+ 
+  beginShape();
+  dropShadowReset();
+  noStroke();
+  fill(254);
+  curveVertex(160, 130);
+  curveVertex(25, 200);
+  curveVertex(126, 344);
+  curveVertex(400, 325);
+  curveVertex(300, 80);
+  
+  endShape();
+  
+  beginShape();
+  fill(254);
+  noStroke();
+  curveVertex(33, 260)
+  curveVertex(25, 200)
+  curveVertex(200, 175)
+  curveVertex(323, 213)
+  curveVertex(400, 325)
+  curveVertex(372, 415)
+  
+  endShape();
+}
+
+function eyeShading() {
+  beginShape();
+  noStroke();
+  fill(236, 94, 152);
+  
+  // angle
+  curveVertex()
+  
+  curveVertex(391, 299);
+}
+
+function eyeOutline() {
+  
+  // lower outline
+  beginShape();
+  noStroke();
+  fill(0);
+  
+  // angle
+  curveVertex(500, 300)
+  
+  curveVertex(363, 348);
+  curveVertex(134, 340)
+  curveVertex(20, 200)
+  curveVertex(4, 210);
+  curveVertex(110, 352);
+  curveVertex(363, 348);
+  
+  // angle
+  curveVertex(345, 275)
+  
+  endShape();
+  
+// upper outline
+  beginShape();
+  noStroke();
+  fill(0);
+  
+  // angle
+  curveVertex(750, 315)
+
+ 
+  curveVertex(20, 200)
+  curveVertex(200, 175)
+  curveVertex(326, 208)
+  curveVertex(391, 299);
+  curveVertex(282, 205);
+  curveVertex(25, 200)
+  
+  // angle
+  curveVertex(194, 228)
+  
+  endShape();
 }
 
 function dropShadow(OffsetX, OffsetY, blur, color) {
@@ -239,4 +358,3 @@ endShape();
   dropShadow(-15, 0, 50, 'black');
   ellipse(ellipseX, ellipseY, ellipseSize);  
 }
-
