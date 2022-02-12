@@ -1,14 +1,20 @@
-let rectSpeedTest;
-let rectYTest = 0;
-let rectYTestUp = 275
+// global variables for rect / eyelids, necessary in draw scope
+let rectSpeed = 35
+let rectYMove = 0;
+let rectYMoveUp = 275
+
+// blur in relation to rect / eyelid movement
 let blurRed = 0
-let blurSpeed = 5
-let maxBlur = 40
+
+
+// check for click
+let clickListener = 1
+
 
 function preload() {
   soundFormats('mp3');
   mySound = loadSound('sharingan'); 
-  mySound.setVolume(0.3) 
+  mySound.setVolume(0.2) 
 }
 
 function setup() {
@@ -16,42 +22,39 @@ function setup() {
 }
 
 function draw() {
- background(20);
- let audioTime = mySound.currentTime();
+background(20);
+ 
+let audioTime = mySound.currentTime(); 
 
-  // left eye
+  
+// left eye
 push()
- eyeWhites(50, 0, 1, 1); 
+  eyeWhites(50, 0, 1, 1); 
 pop();
   
 // right eye
 push(); 
-eyeWhites(900, 0, -1, 1);
+  eyeWhites(900, 0, -1, 1);
 pop();
 
 
 // left pupil
 push(); 
- translate(158, 173);
-if (rectYTest < -105 && audioTime < 1.5893125) {
- translate(random(-5,5),random(-5,5));
+  if (rectYMove < -70 && audioTime < 1.5893125) {
+    translate(random(-5,5),random(-5,5));
   }
- scale(0.5);
- mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
+  mangekyoSharingan(170, 230, 150, 250, 200, 145, 255, 158, 173, 0.5, 0.5);
 pop();
-
 
 // right pupil
 push();
- translate(600, 173);
-  if (rectYTest < -105 && audioTime < 1.5893125) {
- translate(random(-5,5),random(-5,5));
+  if (rectYMove < -70 && audioTime < 1.5893125) {
+   translate(random(-5,5),random(-5,5));
   }
- scale(0.5)
- mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
+ mangekyoSharingan(170, 230, 150, 250, 200, 145, 255, 600, 173, 0.5, 0.5);
 pop(); 
 
-  
+ 
 // left eye outline
 push();
  eyeOutline(50, 0, 1, 1); 
@@ -61,78 +64,74 @@ pop();
 push();
   eyeOutline(900, 0, -1, 1);
 pop();
-
-if (rectYTest < -105 && audioTime < 1.5893125) {
-  eyeBlur()
+  
+  
+// red glowing animation
+if (rectYMove < -70 && audioTime < 1.5) {
+   eyeBlur()
 } else {
   blurRed = 0
 }
   
-if (blurRed > 50) {
-  blurRed = maxBlur
-}
-  
-if (rectYTest === -105) {
-   mySound.play();
-}
-
-  
-
-console.log(audioTime)
+// function calls
+soundPlay();
+clickCheck()
 eyeOpenRect(); 
-eyeOpenRectMove()
 frameRateChange();
 }
 
-function eyeWhites(translateX, translateY, scaleX, scaleY) {
-push()
-translate(translateX, translateY);
-scale(scaleX, scaleY)
- 
-beginShape();
-  dropShadowReset();
-  noStroke();
-  fill(254);
-  curveVertex(160, 130);
-  curveVertex(25, 200);
-  curveVertex(126, 344);
-  curveVertex(400, 325);
-  curveVertex(300, 80);
-  
-endShape();
-  
-beginShape();
-  fill(254);
-  noStroke();
-  curveVertex(33, 260)
-  curveVertex(25, 200)
-  curveVertex(200, 175)
-  curveVertex(323, 213)
-  curveVertex(400, 325)
-  curveVertex(372, 415)
-  
-endShape();
 
-pop()
+
+function eyeWhites(translateX, translateY, scaleX, scaleY) {
+
+  push()
+    translate(translateX, translateY);
+    scale(scaleX, scaleY)
+ 
+    beginShape();
+      dropShadowReset();
+      noStroke();
+      fill(254);
+      curveVertex(160, 130);
+      curveVertex(25, 200);
+      curveVertex(126, 344);
+      curveVertex(400, 325);
+      curveVertex(300, 80);
   
-push()
-stroke(255);
-strokeWeight(1);
-line(75, 200, 450, 325)
-pop()
+    endShape();
   
-push()
-stroke(255);
-strokeWeight(1);
-line(875, 200, 500, 325)
-pop()
+    beginShape();
+      fill(254);
+      noStroke();
+      curveVertex(33, 260)
+      curveVertex(25, 200)
+      curveVertex(200, 175)
+      curveVertex(323, 213)
+      curveVertex(400, 325)
+      curveVertex(372, 415)
+  
+    endShape();
+
+  pop()
+  
+  push()
+    stroke(255);
+    strokeWeight(1);
+    line(75, 200, 450, 325)
+  pop()
+  
+  push()
+    stroke(255);
+    strokeWeight(1);
+    line(875, 200, 500, 325)
+  pop()
 }
 
 
 function eyeOutline(translateX, translateY, scaleX, scaleY) {
   
-translate(translateX, translateY)
-scale(scaleX, scaleY);
+  translate(translateX, translateY)
+  scale(scaleX, scaleY);
   
   // lower outline
   beginShape();
@@ -190,7 +189,12 @@ function dropShadowReset() {
   drawingContext.shadowColor = 'black';
 }
 
-function mangekyoSharingan(hexUpperY, hexLowerY, hexLeftX, hexRightX, hexPeakX, hexPeakYTop, hexPeakYBottom, irisX, irisY) {
+function mangekyoSharingan(hexUpperY, hexLowerY, hexLeftX, hexRightX, hexPeakX, hexPeakYTop, hexPeakYBottom, translateX, translateY, scaleX, scaleY) {
+  
+  
+translate(translateX, translateY);
+scale(scaleX, scaleY);
+  
   
 // variables for hexagon
 let hexagonUpperY = hexUpperY;
@@ -229,10 +233,6 @@ let triDiff = 30
 let rectBasicX = 200;
 let rectBasicY = 200;
 let rectSpeed = 3;
-
-// variables for dropshadow
-
-
 
   dropShadowReset();
   fill(0);
@@ -395,24 +395,67 @@ fill(0, 0, 0);
 }
 
 function frameRateChange() {
-  frameRate(1);
-  if (rectYTest < -105) {
+  
+  if (rectYMove < -70) {
     frameRate(60);
+  } else {
+    frameRate(1);
   }
 }
 
 function eyeOpenRect() {
+  
+// variables for rect, eye opening animation
+  let rectUpLow = 275
+  let rectUpHigh = 2000
+  let rectLow = -2000
+  let rectHigh = 0
+  let constrainRectUp = constrain(rectYMoveUp, rectUpLow, rectUpHigh);
+  let constrainRect = constrain(rectYMove, rectLow, rectHigh);
 
-noStroke();
-fill(20)
-rect(0, rectYTest, 950, 275);
-rect(0, rectYTestUp, 950, 275);
+// rect / eyelids
+  noStroke();
+  fill(20)
+  rect(0, constrainRect, 950, 275);
+  rect(0, constrainRectUp, 950, 275);
+  
+// make rect move back, close eyes
+  if (rectYMove < -2000) {
+    rectYMove += 1
+    rectSpeed *= -1
+  } 
 }
 
 function eyeOpenRectMove() {
   rectYTest -= 35
   rectYTestUp += 35 
 }
+
+
 function eyeBlur() {
+  let maxBlur = 30;
+  let blurSpeed = 5;
+  
   blurRed += blurSpeed
+  
+  if (blurRed > 50) {
+      blurRed = maxBlur
+  } 
+}
+
+function clickCheck() {
+  if (clickListener === -1) {
+     rectYMove -= rectSpeed
+     rectYMoveUp += rectSpeed
+  }
+}
+
+function mouseClicked() {
+  clickListener *= -1
+}
+
+function soundPlay() {
+  if (rectYMove === -70) {
+     mySound.play();
+  }
 }
