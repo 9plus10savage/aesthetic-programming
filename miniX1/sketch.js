@@ -1,68 +1,95 @@
-let cnv;
-const canvasWidth = 800;
-const canvasHeight = 400;
 let rectSpeedTest;
 let rectYTest = 0;
-let rectYTestUp = 275;
+let rectYTestUp = 275
+let blurRed = 0
+let blurSpeed = 5
+let maxBlur = 40
+
+function preload() {
+  soundFormats('mp3');
+  mySound = loadSound('sharingan'); 
+  mySound.setVolume(0.3) 
+}
 
 function setup() {
-  createCanvas(950, 1000);
-  angleMode(DEGREES);
+  createCanvas(950, 550); 
 }
 
 function draw() {
- background(220);
+ background(20);
+ let audioTime = mySound.currentTime();
 
-push();
-
- translate(50, 0);
- leftEye(); 
- eyeOutline();
- 
+  // left eye
+push()
+ eyeWhites(50, 0, 1, 1); 
 pop();
   
-  
-push();
-  
-  translate(900, 0);
-  scale(-1, 1);
-  leftEye();
-  eyeOutline();
-  
+// right eye
+push(); 
+eyeWhites(900, 0, -1, 1);
 pop();
-  
-push();
-  
+
+
+// left pupil
+push(); 
  translate(158, 173);
- scale(0.5)
+if (rectYTest < -105 && audioTime < 1.5893125) {
+ translate(random(-5,5),random(-5,5));
+  }
+ scale(0.5);
  mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
-  
 pop();
 
+
+// right pupil
 push();
-  
  translate(600, 173);
+  if (rectYTest < -105 && audioTime < 1.5893125) {
+ translate(random(-5,5),random(-5,5));
+  }
  scale(0.5)
  mangekyoSharingan(170, 230, 150, 250, 200, 145, 255);
-  
 pop(); 
 
-/*
-frameRate(1);
-noStroke();
-fill(220)
-rect(0, rectYTest, 950, 275);
-rect(0, rectYTestUp, 950, 500);
   
-rectYTest -= 35
-rectYTestUp += 35
-*/
+// left eye outline
+push();
+ eyeOutline(50, 0, 1, 1); 
+pop();
+  
+// right eye outline 
+push();
+  eyeOutline(900, 0, -1, 1);
+pop();
 
+if (rectYTest < -105 && audioTime < 1.5893125) {
+  eyeBlur()
+} else {
+  blurRed = 0
+}
+  
+if (blurRed > 50) {
+  blurRed = maxBlur
+}
+  
+if (rectYTest === -105) {
+   mySound.play();
 }
 
-function leftEye() {
+  
+
+console.log(audioTime)
+eyeOpenRect(); 
+eyeOpenRectMove()
+frameRateChange();
+}
+
+function eyeWhites(translateX, translateY, scaleX, scaleY) {
+push()
+translate(translateX, translateY);
+scale(scaleX, scaleY)
  
-  beginShape();
+beginShape();
   dropShadowReset();
   noStroke();
   fill(254);
@@ -72,9 +99,9 @@ function leftEye() {
   curveVertex(400, 325);
   curveVertex(300, 80);
   
-  endShape();
+endShape();
   
-  beginShape();
+beginShape();
   fill(254);
   noStroke();
   curveVertex(33, 260)
@@ -84,21 +111,28 @@ function leftEye() {
   curveVertex(400, 325)
   curveVertex(372, 415)
   
-  endShape();
+endShape();
+
+pop()
+  
+push()
+stroke(255);
+strokeWeight(1);
+line(75, 200, 450, 325)
+pop()
+  
+push()
+stroke(255);
+strokeWeight(1);
+line(875, 200, 500, 325)
+pop()
 }
 
-function eyeShading() {
-  beginShape();
-  noStroke();
-  fill(236, 94, 152);
-  
-  // angle
-  curveVertex()
-  
-  curveVertex(391, 299);
-}
 
-function eyeOutline() {
+function eyeOutline(translateX, translateY, scaleX, scaleY) {
+  
+translate(translateX, translateY)
+scale(scaleX, scaleY);
   
   // lower outline
   beginShape();
@@ -130,8 +164,8 @@ function eyeOutline() {
 
  
   curveVertex(20, 200)
-  curveVertex(200, 175)
-  curveVertex(326, 208)
+  curveVertex(200, 173)
+  curveVertex(326, 201)
   curveVertex(391, 299);
   curveVertex(282, 205);
   curveVertex(25, 200)
@@ -197,9 +231,9 @@ let rectBasicY = 200;
 let rectSpeed = 3;
 
 // variables for dropshadow
-let blurRed;  
-blurRed = random(35, 50);
-  
+
+
+
   dropShadowReset();
   fill(0);
   ellipse(hexagonPeakX, hexagonPeakYTop / 2 + hexagonPeakYBottom / 2, outerEyeSize);
@@ -335,10 +369,11 @@ vertex(lowerLeftTrianglePeakX - fakeStroke - needleLength, lowerTrianglePeakY);
 endShape();
 
   let ellipseX = random(hexagonPeakX, hexagonPeakX + 2);
-  let ellipseY = random(hexagonPeakYTop / 2 + hexagonPeakYBottom / 2, hexagonPeakYTop / 2 + hexagonPeakYBottom / 2 + 2);
+  let ellipseY = random(hexagonPeakYTop / 2 + hexagonPeakYBottom / 2, hexagonPeakYTop / 2 +         hexagonPeakYBottom / 2 + 2);
   
- noStroke();
- fill(0, 0, 0);
+  
+noStroke();
+fill(0, 0, 0);
   
   dropShadow(0, 15, 50, 'black');
   ellipse(ellipseX, ellipseY, ellipseSize);
@@ -357,4 +392,27 @@ endShape();
   
   dropShadow(-15, 0, 50, 'black');
   ellipse(ellipseX, ellipseY, ellipseSize);  
+}
+
+function frameRateChange() {
+  frameRate(1);
+  if (rectYTest < -105) {
+    frameRate(60);
+  }
+}
+
+function eyeOpenRect() {
+
+noStroke();
+fill(20)
+rect(0, rectYTest, 950, 275);
+rect(0, rectYTestUp, 950, 275);
+}
+
+function eyeOpenRectMove() {
+  rectYTest -= 35
+  rectYTestUp += 35 
+}
+function eyeBlur() {
+  blurRed += blurSpeed
 }
