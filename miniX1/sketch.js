@@ -10,6 +10,9 @@ let blurRed = 0
 // check for click
 let clickListener = 1
 
+// instruction text
+let guide = 'click anywhere to play, refresh to restart'
+
 
 function preload() {
   soundFormats('mp3');
@@ -23,7 +26,8 @@ function setup() {
 
 function draw() {
 background(20);
- 
+
+// check for audio duration
 let audioTime = mySound.currentTime(); 
 
   
@@ -78,6 +82,7 @@ soundPlay();
 clickCheck()
 eyeOpenRect(); 
 frameRateChange();
+textInstruction()
 }
 
 
@@ -458,4 +463,11 @@ function soundPlay() {
   if (rectYMove === -70) {
      mySound.play();
   }
+}
+
+function textInstruction() {
+  textSize(32);
+  fill(255);
+  textAlign(LEFT, CENTER)
+  text(guide, 200, 450);
 }
