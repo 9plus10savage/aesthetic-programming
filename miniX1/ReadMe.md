@@ -18,7 +18,7 @@ In this RunMe, programming was used as a tool for artistic expression, or atleas
 <br> <br>
 Reading other people's code has made me realize that there are obviously a lot of different ways in programming to achieve the same result, and seeing how other people interpret and solve problems can be beneficial to your own skills. 
 <video controls="true" allowfullscreen="true">
-  <source src="sharinganExample" type="video/mp4">
+  <source src="sharinganExample.mp4" type="video/mp4">
 </video>
 
 ### **References**
