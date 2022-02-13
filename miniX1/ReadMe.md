@@ -26,10 +26,10 @@ Reading other people's code has made me realize that there are obviously a lot o
 
 
 ### **References**
-[Drop shadow from processing.org](https://openprocessing.org/sketch/858175/){:target="_blank"}
+[Drop shadow from processing.org](https://openprocessing.org/sketch/858175/) {:target="_blank"}
 <br>
-[Transformations tutorial by Codingtrain](https://www.youtube.com/watch?v=o9sgjuh-CBM){:target="_blank"}
+[Transformations tutorial by Codingtrain](https://www.youtube.com/watch?v=o9sgjuh-CBM) {:target="_blank"}
 <br>
-[Reference for pupil](https://upload.wikimedia.org/wikipedia/commons/7/7a/Mangekyou_Sharingan_Sasuke.svg){:target="_blank"}
+[Reference for pupil](https://upload.wikimedia.org/wikipedia/commons/7/7a/Mangekyou_Sharingan_Sasuke.svg) {:target="_blank"}
 <br>
-[Reference for eyeshape](https://www.artstation.com/artwork/8yOAq){:target="_blank"}
+[Reference for eyeshape](https://www.artstation.com/artwork/8yOAq) {:target="_blank"}
