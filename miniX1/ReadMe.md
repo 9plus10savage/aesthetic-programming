@@ -3,8 +3,8 @@
 I've already written a few things last year and in preparation for the semester, so i wanted to do something different. I decided to do a drawing, mainly because i wanted to see how difficult it'd be to create something somewhat intricate. I'm really bad at drawing, and have neither the time, motivation or talent to cultivate this skill, so i wanted employ code to facilitate artistic expression. 
 <br> <br>
 
-Center-alligned
-{: ![Semantic description of image](sharinganExampleImg.PNG "Image Title")}
+
+{: ![Semantic description of image](sharinganExampleImg.PNG "Image Title") .text-center}
 
 
 
