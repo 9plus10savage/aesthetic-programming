@@ -17,5 +17,8 @@ Creating this somewhat geometric / triogonometric made me realize how bad i am a
 In this RunMe, programming was used as a tool for artistic expression, or atleast recreation of this. However, it also employs concepts that i personally didn't associate with drawing before writing this. This project was naturally a little extensive, and I'm sure I could've at least made the shapes themselves in Photoshop a lot faster, but using code to achieve this was interesting, and has given me a better perspective and understanding of a lot of syntax, that i hadn't used before. Personally, i believe that the best way of learning how to code, for me atleast, is picking a lofty goal, and then just building it step by step. Then you might found out 'oh this doesn't work with this' and then you learn a lot faster. 
 <br> <br>
 Reading other people's code has made me realize that there are obviously a lot of different ways in programming to achieve the same result, and seeing how other people interpret and solve problems can be beneficial to your own skills. 
+<video controls="true" allowfullscreen="true">
+  <source src="sharinganExample" type="video/mp4">
+</video>
 
 ### **References**
