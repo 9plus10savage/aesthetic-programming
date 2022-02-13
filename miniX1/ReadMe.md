@@ -7,7 +7,7 @@ I've already written a few things last year and in preparation for the semester,
  ![This image depicts a still frame from the sharingan animation](sharinganExampleImg.PNG "Sharingan freeze-frame")
 
 
-The program depicts an homage, or rather an attempted recreation of Sasuke's "Sharingan" from the anime Naruto. The output is made up of several components. The constitution of the drawing starts from inside out, at least my writing did. It started with the innermost ellipse, then the red shapes in the pupil, then the big ellipse, then the 'whites' in the eyes (with a line for correction due to inconsistency when using multiple begin/endShape()), then the black outline of the eye, and lastly the make-shift eyelids, which consist of two rectangles with the fill as background. 
+The drawing depicts an homage, or rather an attempted recreation of Sasuke's "Sharingan" from the anime Naruto. The output is made up of several components. The constitution of the drawing starts from inside out, at least my writing did. It started with the innermost ellipse, then the red shapes in the pupil, then the big ellipse, then the 'whites' in the eyes (with a line for correction due to inconsistency when using multiple begin/endShape()), then the black outline of the eye, and lastly the make-shift eyelids, which consist of two rectangles with the fill as background. 
 <br> <br>
 Practically, the different elements are not called in this order. The pupil is called before the outline, so it appears "behind" the outline. This concept was somewhat hard to grasp, drawing from previous photoshop experience enabled this solution. 
 <br> <br>
@@ -26,3 +26,10 @@ Reading other people's code has made me realize that there are obviously a lot o
 
 
 ### **References**
+[Drop shadow from processing.org](https://openprocessing.org/sketch/858175/){:target="_blank"}
+<br>
+[Transformations tutorial by Codingtrain](https://www.youtube.com/watch?v=o9sgjuh-CBM){:target="_blank"}
+<br>
+[Reference for pupil](https://upload.wikimedia.org/wikipedia/commons/7/7a/Mangekyou_Sharingan_Sasuke.svg){:target="_blank"}
+<br>
+[Reference for eyeshape](https://www.artstation.com/artwork/8yOAq){:target="_blank"}
