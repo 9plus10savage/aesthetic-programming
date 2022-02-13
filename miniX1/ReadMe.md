@@ -2,6 +2,9 @@
 
 I've already written a few things last year and in preparation for the semester, so i wanted to do something different. I decided to do a drawing, mainly because i wanted to see how difficult it'd be to create something somewhat intricate. I'm really bad at drawing, and have neither the time, motivation or talent to cultivate this skill, so i wanted employ code to facilitate artistic expression. 
 <br> <br>
+
+![The image depicts a static frame from animation] (sharinganExampleImg.png "Sharingan frame")
+
 The program depicts an homage, or rather an attempted recreation of Sasuke's "Sharingan" from the anime Naruto. The output is made up of several components. The constitution of the drawing starts from inside out, at least my writing did. It started with the innermost ellipse, then the red shapes in the pupil, then the big ellipse, then the 'whites' in the eyes (with a line for correction due to inconsistency when using multiple begin/endShape()), then the black outline of the eye, and lastly the make-shift eyelids, which consist of two rectangles with the fill as background. 
 <br> <br>
 Practically, the different elements are not called in this order. The pupil is called before the outline, so it appears "behind" the outline. This concept was somewhat hard to grasp, drawing from previous photoshop experience enabled this solution. 
@@ -18,11 +21,6 @@ In this RunMe, programming was used as a tool for artistic expression, or atleas
 <br> <br>
 Reading other people's code has made me realize that there are obviously a lot of different ways in programming to achieve the same result, and seeing how other people interpret and solve problems can be beneficial to your own skills. 
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="./sharinganExampleImg.png">
-    <source src="./sharinganExample.mp4" type="video/mp4">
-    test
-  </video>
-</figure>
+
 
 ### **References**
