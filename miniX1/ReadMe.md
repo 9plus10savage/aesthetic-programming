@@ -20,7 +20,8 @@ Reading other people's code has made me realize that there are obviously a lot o
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true" poster="sharinganExampleImg.png">
-     <source src="sharinganExample.mp4" type="video/mp4">
+    <source src="sharinganExample.mp4" type="video/mp4">
+    test
   </video>
 </figure>
 
