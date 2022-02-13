@@ -4,7 +4,8 @@ I've already written a few things last year and in preparation for the semester,
 <br> <br>
 
 
-{: ![Semantic description of image](sharinganExampleImg.PNG "Image Title") .text-center}
+ ![Semantic description of image](sharinganExampleImg.PNG "Image Title")
+ {: .text-center}
 
 
 
