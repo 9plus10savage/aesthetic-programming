@@ -1,8 +1,7 @@
 ## Personalized Gender Emoji
+My concept/vision was based on an exhibit at KØN museum in Aarhus called Gender Blender. A part of this exhibit was this artifact, where you'd input your biological sex, gender identity, gender expression, and your sexuality. You had 4 sliders with 5 different points, after inputting these, you could submit them, and you could see other people's results as well. The results are depicted in the image below: <br>
+![This image depicts an example from the KØN exhibit](koenexampleresize.png "Example from exhibit)
 <br> <br>
-My concept/vision was based on an exhibit at KØN museum in Aarhus called Gender Blender. A part of this exhibit was this artifact, where you'd input your biological sex, gender identity, gender expression, and your sexuality. You had 4 sliders with 5 different points, after inputting these, you could submit them, and you could see other people's results as well. The results are depicted in the image below:
-<br> <br>
-
 I will preface my design by stating that there's several issues with this representation of gender and sexuality as well. Firstly, although to a lesser extent that the unfortunately "commonplace" depiction of the gender spectrum, this version is still quite binary. Secondly, by including sexuality with no alternative, will exclude individuals who don't experience sexual/romantic attraction, or who don't allign with any sexuality. 
 <br> <br>
 Rather than having 5 fixed points, i decided to make sliders appear completely without any "stopping points", representing the fluidity of gender. I decided to exclude biological sex, since i did not see any merit in it's inclusion. 
