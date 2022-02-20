@@ -1,8 +1,8 @@
 ## Personalized Gender Emoji
-My concept/vision was based on an exhibit at KØN museum in Aarhus called Gender Blender. A part of this exhibit was this artifact, where you'd input your biological sex, gender identity, gender expression, and your sexuality. You had 4 sliders with 5 different points, after inputting these, you could submit them, and you could see other people's results as well. The results are depicted in the image below: <br>
-![This image depicts an example from the KØN exhibit](koenexampleresize.png "Example from exhibit)
+My concept/vision was based on an exhibit at KØN museum in Aarhus called Gender Blender. A part of this exhibit was this artifact, where you'd input your biological sex, gender identity, gender expression, and your sexuality. You had 4 sliders with 5 different points, after inputting these, you could submit them, and you could see other people's results as well. The results are depicted in the image below: <br> <br>
+![This image depicts an example from the KØN exhibit](koenexampleresize.png "Example from exhibit")
 <br> <br>
-I will preface my design by stating that there's several issues with this representation of gender and sexuality as well. Firstly, although to a lesser extent that the unfortunately "commonplace" depiction of the gender spectrum, this version is still quite binary. Secondly, by including sexuality with no alternative, will exclude individuals who don't experience sexual/romantic attraction, or who don't allign with any sexuality. 
+I will preface my design by stating that there's several issues with this representation of gender and sexuality as well. Firstly, although to a lesser extent that the unfortunately "commonplace" depiction of the gender spectrum, this version is still quite binary. Secondly, including sexuality with no alternative, will exclude individuals who don't experience sexual/romantic attraction, or who don't allign with any sexuality. 
 <br> <br>
 Rather than having 5 fixed points, i decided to make sliders appear completely without any "stopping points", representing the fluidity of gender. I decided to exclude biological sex, since i did not see any merit in it's inclusion. 
 <br> <br>
@@ -14,6 +14,10 @@ Quick note on the code itself: I wanted to try manipulating the DOM through the 
 <br> <br>
 ![This image depicts my gender as an example](genderemojiex.png "My gender emoji")
 <br> <br>
+Please view the program [here](https://9plus10savage.gitlab.io/aesthetic-programming/miniX2) <br>
+You can check out the full repository [here](https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX2/sketch.js) <br>
+You can check the CSS styling [here](https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX2/style.css)
+
 ### **References**
 [Passing arguments in mousePressed()](https://stackoverflow.com/questions/35680778/p5js-button-mousepressed-calls-function-arguments)
 <br>
