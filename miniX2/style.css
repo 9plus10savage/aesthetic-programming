@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+.mySliders {
+  width: 200px;
+  background-color: #d3d3d3;
+  border-radius: 15px;
+  height: 30px;
+  cursor: pointer;
+  /*filter: drop-shadow(10px 12px 3px #a69d86); */
+ box-shadow: 10px 10px 5px #888888;
+
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mySliders::-webkit-slider-thumb {
+ -webkit-appearance: none;
+  appearance: none;
+  background: #9499a1;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 1px 3px #948c76);
+}
+
+.myEyeButtons {
+  cursor: pointer;
+  background-color: #cdc4d5;
+  color: #000000;
+  border: 3px solid #000000;
+  transition: 220ms all ease-in-out;
+  padding: 8px 15.5px;
+
+}
+
+.myEyeButtons:hover {
+    filter: drop-shadow(4px 5px 0px #000);
+    transform: translateY(-0.25em);
+}
+
+.myEyeButtons:active {
+  -webkit-appreance: none;
+    transform: translateY(2px);
+}
+
+.myMouthButtons {
+  cursor: pointer;
+  background-color: #F0D9FF;
+  color: #000000;
+  border: 3px solid #000000;
+  transition: 220ms all ease-in-out;
+  padding: 8px 12px;
+
+}
+
+.myMouthButtons:hover {
+    filter: drop-shadow(4px 5px 0px #000);
+    transform: translateY(-0.25em);
+}
+
+.myMouthButtons:active {
+  -webkit-appreance: none;
+    transform: translateY(2px);
+}
+
+.myBackButtons {
+  cursor: pointer;
+  background-color: #BFA2DB;
+  color: #000000;
+  border: 3px solid #000000;
+  transition: 220ms all ease-in-out;
+  padding: 8px 16px;
+
+}
+
+.myBackButtons:hover {
+    filter: drop-shadow(4px 5px 0px #000);
+    transform: translateY(-0.25em);
+}
+
+.myBackButtons:active {
+  -webkit-appreance: none;
+    transform: translateY(2px);
+}
