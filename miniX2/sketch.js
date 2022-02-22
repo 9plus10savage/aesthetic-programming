@@ -37,7 +37,7 @@ function setup() {
   angleMode(DEGREES);
 
 
-  expressionSlider = createSlider(5, 355, 177.5);
+  expressionSlider = createSlider(0, 355, 177.5);
   expressionSlider.position(150, 210);
   expressionSlider.addClass("mySliders");
 
