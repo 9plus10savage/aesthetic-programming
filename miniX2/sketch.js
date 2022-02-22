@@ -304,13 +304,13 @@ function back2() {
 
 function drawBack2() {
   noStroke()
-  fill(331, 87, 100);
+  fill(201, 87, 100);
   rect(outputRectX + 1, outputRectY + 1, outputRectWidth - 1, 280);
 
   fill(51, 100, 100);
   rect(outputRectX + 1, outputRectY + 1, outputRectWidth - 1, 186.666);
 
-  fill(201, 87, 100);
+  fill(331, 87, 100);
   rect(outputRectX + 1, outputRectY + 1, outputRectWidth - 1, 93.333);
 }
 
