@@ -7,7 +7,7 @@ let hourglassPosY = hourglassHeight/2
 let angle = 0
 
 function preload() {
-  hourglassImg = loadImage('hg120fps.gif');
+  hourglassImg = loadImage('hganimation.gif');
 }
 
 function setup() {
