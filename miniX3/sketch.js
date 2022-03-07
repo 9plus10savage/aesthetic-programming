@@ -17,7 +17,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB)
   angleMode(DEGREES)
-  mySound.play();
 }
 
 function draw() { 
@@ -87,4 +86,8 @@ function draw() {
   stroke(0, 0, 100)
   text('Loading...', loadingText.x, loadingText.y)
   pop()
+}
+
+function mousePressed() {
+   mySound.play();
 }
