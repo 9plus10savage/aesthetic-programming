@@ -8,12 +8,16 @@ let angle = 0
 
 function preload() {
   hourglassImg = loadImage('hganimation.gif');
+  soundFormats('mp3');
+  mySound = loadSound('sharingan'); 
+  mySound.setVolume(0.2) 
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB)
   angleMode(DEGREES)
+  mySound.play();
 }
 
 function draw() { 
