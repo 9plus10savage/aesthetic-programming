@@ -11,14 +11,13 @@ function preload() {
   soundFormats('mp3');
   mySound = loadSound('zeldamusic'); 
   mySound.setVolume(0.2) 
-  mySound.play();
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB)
   angleMode(DEGREES)
-  
+  mySound.play();
 }
 
 function draw() { 
