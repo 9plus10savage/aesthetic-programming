@@ -6,6 +6,8 @@ You can run the program [here](https://9plus10savage.gitlab.io/aesthetic-program
 
 You can view the code [here](https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX3/sketch.js)
 
+Disclaimer: You have to click somewhere on the page, in order for the music to play (chrome makes you unable to play sounds before the user has interacted with a page).
+
 My throbber is depicted as an hourglass; I wanted to do something a bit different. Although hourglasses aren't necessarily the forefront of one's mind whilst thinking of throbbers, they've seen use multiple times (an example could be the loading cursor). 
 
 Hourglasses were historically used to measure a certain amount of time, but it only does so when a human interacts with it, so in spirit of the infinite loop, i wanted to eliminate the human factor, and created an hourglass that is automatically flipped by the computer. You might say it's representing infinity, or that it has simply lost its purpose. 
