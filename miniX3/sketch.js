@@ -9,7 +9,7 @@ let angle = 0
 function preload() {
   hourglassImg = loadImage('hganimation.gif');
   soundFormats('mp3');
-  mySound = loadSound('sharingan'); 
+  mySound = loadSound('zeldamusic'); 
   mySound.setVolume(0.2) 
 }
 
