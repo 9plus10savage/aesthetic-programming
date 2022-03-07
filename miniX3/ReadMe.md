@@ -17,3 +17,7 @@ Conceptually, my ideas have been a bit all over the place, and I've given up on 
 (the second part of the sand animation looks really bad, but moving sand pixels for 60 frames is really tedious so i just copied and reversed the initial 60 frames, so you'll just have to trust the vision here.)
 
 ## References
+[Z e l d a w a v e OST] (https://www.youtube.com/watch?v=bHUvykXL8Og)
+[Zelda hourglass reference] (https://zelda.fandom.com/wiki/Phantom_Hourglass_(Item))
+
+
