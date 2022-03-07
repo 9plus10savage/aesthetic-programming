@@ -2,9 +2,9 @@
 
 ![The gif displays the code being run](hgexample.gif "preview")
 
-You can run the program [here] (https://9plus10savage.gitlab.io/aesthetic-programming/miniX3)
+You can run the program [here](https://9plus10savage.gitlab.io/aesthetic-programming/miniX3)
 
-You can view the code [here] (https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX3/sketch.js)
+You can view the code [here](https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX3/sketch.js)
 
 My throbber is depicted as an hourglass; I wanted to do something a bit different. Although hourglasses aren't necessarily the forefront of one's mind whilst thinking of throbbers, they've seen use multiple times (an example could be the loading cursor). 
 
