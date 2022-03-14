@@ -194,11 +194,11 @@
 
   function contentClickDetection() {
     // Youtube click detection
-    if (mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000) {
+    if (mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000 && changeDelay > 3) {
       selector += 1
-    } else if (mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000) {
+    } else if (mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000 && changeDelay > 3) {
         selector += 1
-      } else if (mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000) {
+      } else if (mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && counter > 2000 && changeDelay > 3) {
         selector += 1
       } else {
         cursor(ARROW);
