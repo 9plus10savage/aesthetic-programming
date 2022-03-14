@@ -187,6 +187,7 @@
 
   function exclamationBlink() {
     if (frameCount % 60 === 0) {
+      changeDelay++
       blinkCounter = 255
     } else {
       blinkCounter -= 5
