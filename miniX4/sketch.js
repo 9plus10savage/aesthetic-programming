@@ -11,7 +11,6 @@
   let buttonYPos = 725;
 
   let blinkCounter = 0;
-  let changeDelay = 0
 // text
   let t1 = 'Would you like to \ninstall'
   let t2 = 'Adblock?'
@@ -187,7 +186,6 @@
 
   function exclamationBlink() {
     if (frameCount % 60 === 0) {
-      changeDelay++
       blinkCounter = 255
     } else {
       blinkCounter -= 5
@@ -196,11 +194,11 @@
 
   function contentClickDetection() {
     // Youtube click detection
-    if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && changeDelay > 3) {
+    if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
       selector += 1
-    } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && changeDelay > 3) {
+    } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
         selector += 1
-      } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth && changeDelay > 3) {
+      } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
         selector += 1
       } else {
         cursor(ARROW);
