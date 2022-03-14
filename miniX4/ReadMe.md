@@ -1,12 +1,12 @@
 ## The heart of capitalist media
 
-![The picture is an example from the content part](miniX4example.png "preview")
+![The picture is an example from the content part](miniX4example.PNG "preview")
 
 You can run the program [here](https://9plus10savage.gitlab.io/aesthetic-programming/miniX4)
 
 You can view the code [here](https://gitlab.com/9plus10savage/aesthetic-programming/-/blob/main/miniX4/sketch.js)
 
-The program looks very bad if you're not fullscreen (F11), you might have to zoom out. 
+The program looks very bad if you're not fullscreen (F11), you might have to zoom out as well. 
 
 I've decided to title my project 'The heart of capitalist media." After gaining perspective on data gathering, and the ubiquitous datafication of our lives through Mejias, Ulises A. and Nick Couldry's "Datafication". I wanted to highlight the inevitability of data capture in modern capitalist society.
 
