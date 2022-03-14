@@ -27,6 +27,7 @@
     contentYT = loadImage('contentYT.png');
     contentGames = loadImage('contentGames.png');
     contentArt = loadImage('contentArt.png');
+    pixelfont = loadFont('pixelfont.TTF');
     pixelFont2 = loadFont('pixelfont2.ttf');
     pixelFont3 = loadFont('pixelfont3.ttf');
   }

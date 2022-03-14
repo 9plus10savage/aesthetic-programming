@@ -1,4 +1,9 @@
 @font-face {
+  font-family: Pixel;
+  src: url("pixelfont.ttf") format ("truetype");
+}
+
+@font-face {
     font-family: Pixel2;
     src: url("pixelfont2.ttf") format("truetype");
 }
@@ -30,7 +35,7 @@ body {
   border-radius: 2px;
   transition: 250ms all ease-in-out;
   padding: 8px 40px;
-  font-family: Pixel2;
+  font-family: Pixel;
   font-size: 30px;
 }
 
@@ -54,7 +59,7 @@ body {
   border-radius: 2px;
   transition: 250ms all ease-in-out;
   padding: 8px 40px;
-  font-family: Pixel2;
+  font-family: Pixel;
   font-size: 30px;
 }
 
