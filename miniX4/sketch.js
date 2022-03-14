@@ -71,7 +71,7 @@
       acceptButton.remove();
       declineButton.remove();
       exclamationBlink();
-      contentClickDetection();
+      counterDelay();
 
       push()
         textFont(pixelFont2)
@@ -102,7 +102,6 @@
         text('Art', windowWidth/2  + 375 - 105/2, contentYPos - 30)
       pop()
     } else if (selector === 3 & contentSelector === 0) {
-      counter2 = millis();
       textFont(pixelFont2)
       textSize(100)
       fill(0);
@@ -192,13 +191,19 @@
     }
   }
 
+  function counterDelay() {
+      if (counter > 3000) {
+      contentClickDetection()
+    }
+  }
+
   function contentClickDetection() {
     // Youtube click detection
-    if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
+    if (mouseIsPressed && mouseX > windowWidth/2 - 375 - contentImgWidth/2 && mouseX < windowWidth/2 - 375 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
       selector += 1
-    } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
+    } else if (mouseIsPressed && mouseX > windowWidth/2 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
         selector += 1
-      } else if (counter > 2000 && mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
+      } else if (mouseIsPressed && mouseX > windowWidth/2 + 375 - contentImgWidth/2 && mouseX < windowWidth/2 + contentImgWidth/2 + 375 && mouseY > contentYPos && mouseY < contentYPos + contentImgWidth) {
         selector += 1
       } else {
         cursor(ARROW);
