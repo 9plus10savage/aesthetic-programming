@@ -98,7 +98,7 @@ class MapDetails {
 
   displayHitCounter() {
     textSize(30)
-    text(this.hitCounter, windowWidth - 50, windowHeight - 50)
+    text(this.hitCounter, windowWidth - 50, windowHeight - 20)
   }
 
   displayPlayer1Score() {
