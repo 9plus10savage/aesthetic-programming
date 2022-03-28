@@ -1,6 +1,6 @@
 ## Pong in p5.js
 
-![This picture is a preview of the program](pongexample.png "preview")
+![This picture is a preview of the program](pongexample.PNG "preview")
 
 You can run the program [here](https://9plus10savage.gitlab.io/aesthetic-programming/miniX6)
 
