@@ -17,7 +17,7 @@
 <body>
   <main>
     <div class = buttons>
-      <form action="./miniX6.2/index.html">
+      <form action="./game/index.html">
         <button class = "buttonStyling start nextPage" type="submit"> PLAY </button>
       </form>
       <div>
@@ -86,7 +86,7 @@
 
 /* passes arguments through function playThen.., which calls the other functions that require the arugments, i.e. have specified parameters, this attaches the onclick event to the selected class, which is attached to the first button */
      document.querySelector('.nextPage').onclick = function () {
-       playThenRedirectTo('buttonClick', '../miniX6/index.html');
+       playThenRedirectTo('buttonClick', './game/index.html');
        return false;
 }
 
