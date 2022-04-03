@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong</title>
+  <link rel = "stylesheet" href = style.css>
+  <script src="../library/p5.js"></script>
+  <script src="sketch.js"></script>
+  <script src="class.js"></script>
+  <script src="../library/p5.sound.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="modal-box.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <main>
+    <div class = buttons>
+      <form action="../miniX6/index.html">
+        <button class = "buttonStyling start nextPage" type="submit"> PLAY </button>
+      </form>
+      <div>
+        <div id="my-modal" ><img id="billede" src="controls.png"></div>
+        <button id = "open-modal" class = "buttonStyling controls" onclick="controlsSound()"> Controls </button>
+      </div>
+        <button class = "buttonStyling exit" onclick="closeWindow(); return false;"> Exit </button>
+    </div>
+    <audio id = "buttonClick" src="start1.mp3"></audio>
+  </main>
+
+  <script>
+  function closeWindow() {
+    document.getElementById('buttonClick').play();
+
+    if (confirm("Close Window?")) {
+    close();
+    }
+  }
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#my-modal").wgModal({
+       triggerElement: '#open-modal',
+     });
+    });
+  </script>
+
+  <script>
+    function controlsSound() {
+      document.getElementById('buttonClick').play();
+  }
+
+  </script>
+
+  <script>
+
+// overall func that is getting called
+    function playThenRedirectTo(audioTarget, url) {
+      let time = 0;
+// plays the audio that is passed through it
+      play_single_sound(audioTarget);
+
+
+// logs the audio duration in variable end, if audio is over, redirect to url passed through newPage()
+      setInterval(function () {
+        let end = document.getElementById(audioTarget).played.end(0);
+        if (end > time) {
+           time = end;
+         } else {
+           newPage(url);
+         }
+       }, 100);
+     }
+
+// function declaration for playing sound, selecting the ID that's passed through as argument
+     function play_single_sound(target) {
+       document.getElementById(target).play();
+     }
+
+// function declaration for getting the url which the window will redirect to
+     function newPage(url) {
+       location.href = url;
+     }
+
+/* passes arguments through function playThen.., which calls the other functions that require the arugments, i.e. have specified parameters, this attaches the onclick event to the selected class, which is attached to the first button */
+     document.querySelector('.nextPage').onclick = function () {
+       playThenRedirectTo('buttonClick', '../miniX6/index.html');
+       return false;
+}
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+@font-face {
+    font-family: Pixel2;
+    src: url("pixelfont2.ttf") format("truetype");
+}
+
+
+ * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #000;
+  -webkit-animation:fadein 3s; animation:fadein 3s;
+  cursor: url('stdcursor.png'), auto;
+}
+
+.title {
+  position: absolute;
+  margin:auto;
+  top: 75px;
+  width: 100%;
+  color: #000;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 5px #00fc01;
+  font-family: Pixel2;
+  font-size: 300px;
+  text-align: center;
+  letter-spacing: 15px;
+  text-shadow: 10px 3px 2px rgba(0,252,1,1);
+  transition: all 0.3s ease-in-out;
+}
+
+.floatClass {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  }
+
+.buttons {
+  position:absolute;
+  top: 42vh;
+  width: 100%;
+  height: 58vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.buttonStyling {
+  cursor: url('pointcursor.png'), pointer;
+  background: black;
+  border: 5px solid #00fc01;
+  font-family: Pixel2;
+  padding: 30px 0px;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 2px #00fc01;
+  display: inline;
+  width: 38%;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.buttonStyling:hover {
+  filter: drop-shadow(3px 5px 3px #00fc01);
+}
+
+.buttonStyling:active {
+  transform: translateY(2px);
+}
+
+.start {
+  position: relative;
+
+}
+
+.controls {
+  position: relative;
+  top: 50px;
+}
+
+.exit {
+  position: relative;
+  top: 100px;
+}
+
+
+.bg-wg-modal {
+  background-color:rgba(0,0,0,0.4);
+  width:100%;
+  position:fixed;
+  top:50px;
+  bottom:0;
+  left:0;
+  overflow:auto;
+  z-index:100;
+}
+
+.bg-wg-modal .wg-modal {
+  display:block;
+  width:75%;
+  position:relative;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name:animatetop;
+  -webkit-animation-duration:.4s;
+  animation-name:animatetop;
+  animation-duration:.4s
+}
+
+.bg-wg-modal.closing .wg-modal {
+  -webkit-animation-name:animatetopHide;
+  -webkit-animation-duration:.4s;
+  -webkit-animation-fill-mode:forwards;
+  animation-name:animatetopHide;
+  animation-duration:.4s;
+  animation-fill-mode:forwards;
+}
+
+.bg-wg-modal.closing {
+  -webkit-animation-name:bgAnimatetopHide;
+  -webkit-animation-duration:.4s;
+  -webkit-animation-fill-mode:forwards;
+  animation-name:bgAnimatetopHide;
+  animation-duration:.4s;
+  animation-fill-mode:forwards
+}
+
+.wg-modal.verticalCentering {
+  top:50%;
+  transform:translateY(-50%);
+  margin-top:0!important;
+  margin-bottom:0!important
+}
+
+.wg-modal {
+  display:none;
+  margin:100px auto;
+  background-color:#fff;
+  padding:20px
+}
+
+.wg-modal.innerScroll .wg-content {
+  max-height:calc(100vh - 240px);
+  overflow-y: hidden;
+  }
+
+.wg-modal .wg-modal-close {
+  position:absolute;;
+  top:10px;
+  right: 30px;
+  font-size:75px;
+  font-weight:bold;
+  line-height:100%;
+  cursor: url('pointcursor.png'), pointer;
+  height:50px;
+  width:50px;
+  text-align:center;
+  z-index:1;
+  color: none;
+  -webkit-text-stroke: 2px #00fc01;
+  }
+
+.wg-modal .wg-header {
+  background-color:#eee;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  padding:20px
+}
+
+#billede {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    margin: 0px;
+    right: 0px;
+    top: -10px;
+    border: solid black 10px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }
+}
+
+@-webkit-keyframes fadein { from {opacity:0} to {opacity:1} }
+
+@keyframes fadein { from {opacity:0} to {opacity:1} }
+
+@-webkit-keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}@keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}@-webkit-keyframes animatetopHide{from{top:0;opacity:1}to{top:-300px;opacity:0}}@keyframes animatetopHide{from{top:0;opacity:1}to{top:-300px;opacity:0}}@-webkit-keyframes bgAnimatetopHide{from{opacity:1}to{opacity:0}}@keyframes bgAnimatetopHide{from{opacity:1}to{opacity:0}}
