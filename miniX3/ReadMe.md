@@ -1,6 +1,6 @@
 ## Hourglass Throbber
 
-![The gif displays the code being run](hgexample.gif "preview")
+![The image displays the code being run](hgpreview.png "preview")
 
 You can run the program [here](https://9plus10savage.gitlab.io/aesthetic-programming/miniX3)
 
