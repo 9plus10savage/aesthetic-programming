@@ -4,7 +4,7 @@ let minStars = 25;
 let startTheme;
 
 function preload() {
-  pixelFont = loadFont('pixelfont2.ttf');
+  pixelFont = loadFont('/assets/pixelfont2.ttf');
   soundFormats('mp3');
   startTheme = loadSound('themeMusic')
   startTheme.setVolume(0.2);
