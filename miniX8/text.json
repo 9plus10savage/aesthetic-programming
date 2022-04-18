@@ -1,0 +1,137 @@
+{
+  "strings":
+  [
+    {
+      "normativeStatement": "grey."
+    },{
+      "normativeStatement": "normative."
+    },{
+      "normativeStatement": "orthodox."
+    },{
+      "normativeStatement": "conformative."
+    },{
+      "normativeStatement": "bland."
+    },{
+      "normativeStatement": "basic."
+    },{
+      "normativeStatement": "okay."
+    },{
+      "normativeStatement": "a cog in the machine."
+    },{
+      "normativeStatement": "identityless."
+    },{
+      "normativeStatement": "indoctrinated."
+    },{
+      "normativeStatement": "molded."
+    },{
+      "normativeStatement": "numb."
+    },{
+      "normativeStatement": "supressing."
+    },{
+      "normativeStatement": "blurred."
+    },{
+      "normativeStatement": "someone else."
+    },{
+      "normativeStatement": "square."
+    },{
+      "normativeStatement": "unnecessary."
+    },{
+      "normativeStatement": "manufactured."
+    },{
+      "normativeStatement": "monotonous."
+    },{
+      "normativeStatement": "corporate."
+    },{
+      "normativeStatement": "mundane."
+    },{
+      "normativeStatement": "characterless."
+    },{
+      "normativeStatement": "stepped on."
+    },{
+      "normativeStatement": "spiritless."
+    },{
+      "normativeStatement": "unvaried."
+    },{
+      "normativeStatement": "monitored."
+    },{
+      "normativeStatement": "vapid."
+    },{
+      "normativeStatement": "regulated."
+    },{
+      "normativeStatement": "traditional."
+    },{
+      "normativeStatement": "commonplace."
+    },{
+      "normativeStatement": "dying."
+    },{
+      "normativeStatement": "defeated."
+    },{
+      "normativeStatement": "everyone."
+    },{
+      "normativeStatement": "lost."
+    },{
+      "normativeStatement": "society."
+    },{
+      "normativeStatement": "agenda."
+    },{
+      "normativeStatement": "predictable."
+    },{
+      "normativeStatement": "blinded."
+    },{
+      "normativeStatement": "afraid."
+    }
+  ],
+
+  "forbiddenstrings":
+  [
+    {
+      "forbiddenStatement": "doing what i want!"
+    },{
+      "forbiddenStatement": "free."
+    },{
+      "forbiddenStatement": "thinking."
+    },{
+      "forbiddenStatement": "emotional."
+    },{
+      "forbiddenStatement": "changing."
+    },{
+      "forbiddenStatement": "queer."
+    },{
+      "forbiddenStatement": "myself."
+    },{
+      "forbiddenStatement": "flourishing."
+    },{
+      "forbiddenStatement": "lucid."
+    },{
+      "forbiddenStatement": "dancing."
+    },{
+      "forbiddenStatement": "critical."
+    },{
+      "forbiddenStatement": "enlightened."
+    },{
+      "forbiddenStatement": "transcended."
+    },{
+      "forbiddenStatement": "breaking the mold."
+    },{
+      "forbiddenStatement": "raging against the machine."
+    },{
+      "forbiddenStatement": "bright."
+    },{
+      "forbiddenStatement": "unusual."
+    },{
+      "forbiddenStatement": "quirky."
+    },{
+      "forbiddenStatement": "individual."
+    },{
+      "forbiddenStatement": "unquantifiable."
+    },{
+      "forbiddenStatement": "loving."
+    },{
+      "forbiddenStatement": "accepting."
+    },{
+      "forbiddenStatement": "passionate."
+    },{
+      "forbiddenStatement": "dreaming."
+    }
+  ]
+}
