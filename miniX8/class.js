@@ -48,7 +48,7 @@ class Textbox {
 class Matrix {
   constructor(x) {
     this.x = x
-    this.y = -100
+    this.y = -80
     this.string = round(random(0, 1))
     this.opacity = 255
     this.history = []
