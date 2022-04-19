@@ -129,7 +129,7 @@ function normativeBodytext(arrayNum, string, string2, boxSizeY) {
     if (string.length <= index) {
         textFont(forbiddenFont)
         index1 += 0.5
-        fill(255, 0, 0)
+        fill(0, 252, 1)
         text(string2.substring(0, index1), textboxArray[arrayNum].rectX + textboxArray[arrayNum].sizeX/10 - textboxArray[arrayNum].sizeX/2, textboxArray[arrayNum].rectY + textboxArray[arrayNum].sizeY/10, textboxArray[arrayNum].sizeX - textboxArray[arrayNum].sizeX/5, textboxArray[arrayNum].sizeY/2 - textboxArray[arrayNum].sizeY/7.5)
       }
   pop();
