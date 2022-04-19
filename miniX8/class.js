@@ -86,7 +86,7 @@ class Matrix {
   move() {
     this.y += 10
 
-    if (this.y > windowHeight + 100) {
+    if (this.y > windowHeight + 500) {
       this.boundsCheck = true
       this.y = this.y 
     }
