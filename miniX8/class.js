@@ -58,7 +58,7 @@ class Matrix {
   historyMethod() {
     let v = createVector(this.x, this.y);
 
-    if (frameCount % 5 === 0 && !boundsCheck) {
+    if (frameCount % 5 === 0 && !this.boundsCheck) {
       this.history.push(v);
     }
   }
