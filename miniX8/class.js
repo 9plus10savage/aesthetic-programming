@@ -52,12 +52,13 @@ class Matrix {
     this.string = round(random(0, 1))
     this.opacity = 255
     this.history = []
+    this.boundsCheck = false
   }
 
   historyMethod() {
     let v = createVector(this.x, this.y);
 
-    if (frameCount % 5 === 0) {
+    if (frameCount % 5 === 0 && !boundsCheck) {
       this.history.push(v);
     }
   }
@@ -84,6 +85,11 @@ class Matrix {
 
   move() {
     this.y += 10
+
+    if (this.y > windowHeight + 100) {
+      this.boundsCheck = true
+      this.y = this.y 
+    }
   }
 
 
