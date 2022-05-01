@@ -10,6 +10,15 @@ The program accurately conveys the model of input - algorithmic process - output
 
 We’ll preface our findings by stating the obvious: Our sample size is extremely small, and thus we won’t be presenting any conclusive findings, rather mere speculations and observations based on our small-scale experiment.
 
+![First output](Billede1.jpg "preview")
+![Second output](Billede2.jpg "preview")
+![Third output](Billede3.jpg "preview")
+![Forth output](Billede4.jpg "preview")
+![Fifth output](Billede5.jpg "preview")
+![Sixth oytput](Billede6.jpg "preview")
+
+The most obvious conclusion we can draw based on our experiments, is that the program cannot handle more than one person. The program seems to prioritize the center of the screen as seen in the second to last picture, where we moved the middle of the picture, where it earlier prioritized the middle it did so again, so we speculate that the center of the screen is prioritized in the algorithm. We also found out the algorithm treats colour differently, in one of our sample pictures we changed the hue and saturation of the picture, which resulted in the algorithm perceiving the picture differently than the source and did a different cut. We think this is due to the colour configuration of the algorithm.
+
 # Which line(s) of code is particularly interesting to your group, and why?
 
 The sample code we chose is largely based on the assets used. The code itself is only about 25 lines, so it’s quite interesting that you can operate it with such few functions. We took a peak at the source code itself, and it’s absolutely massive. A very clear example of abstraction. We presume that it’s also due to the fact that the functionality of this application of the sample code is very one-note. 
