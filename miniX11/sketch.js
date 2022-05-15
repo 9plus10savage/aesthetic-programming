@@ -14,28 +14,28 @@ let translateY = 1080/2 + 1860;
 let stars = [];
 
 function preload() {
-  monumentBFont = loadFont('assets/monumentb.otf')
-  img = loadImage('/assets/wheel.png');
-  pointer = loadImage('assets/pointer.png');
-  rotateSound = loadSound('assets/rotateSound3.mp3');
-  rainforestAmb = loadSound('assets/rainforestAmb.mp3');
-  industrialAmb = loadSound('assets/industrialAmb.mp3')
-  currentAmb = loadSound('assets/currentAmb.mp3');
-  nearFutureAmb = loadSound('assets/nearFutureAmb.mp3');
-  posthumanAmb = loadSound('assets/posthumanAmb.mp3');
-  endAmb = loadSound('assets/endAmb.mp3')
-  voiceIntroduction = loadSound('/assets/introduction.wav');
-  voiceRainforestEra = loadSound('/assets/rainforestEra.wav');
-  voiceIndustrialEra = loadSound('/assets/industrialEra.wav');
-  voiceCurrentEra = loadSound('assets/currentEra.wav');
-  voiceFutureEra = loadSound('/assets/nearFutureEra.wav');
-  voicePostHumanEra = loadSound('/assets/posthumanEra.wav');
-  voicePostHumanEra2 = loadSound('assets/posthumanEra2.mp3');
-  voiceConclusion = loadSound('/assets/conclusion.wav');
-  voiceWallBreak = loadSound('/assets/fourthWallBreak.wav');
-  voiceWrongTurn1 = loadSound('/assets/wrongTurn.wav');
-  voiceWrongTurn2 = loadSound('/assets/wrongTurn2.wav');
-  voiceSubsequentTurn = loadSound('/assets/subsequentTurn.wav');
+  monumentBFont = loadFont('./assets/monumentb.otf')
+  img = loadImage('./assets/wheel.png');
+  pointer = loadImage('./assets/pointer.png');
+  rotateSound = loadSound('./assets/rotateSound3.mp3');
+  rainforestAmb = loadSound('./assets/rainforestAmb.mp3');
+  industrialAmb = loadSound('./assets/industrialAmb.mp3')
+  currentAmb = loadSound('./assets/currentAmb.mp3');
+  nearFutureAmb = loadSound('./assets/nearFutureAmb.mp3');
+  posthumanAmb = loadSound('./assets/posthumanAmb.mp3');
+  endAmb = loadSound('./assets/endAmb.mp3')
+  voiceIntroduction = loadSound('./assets/introduction.wav');
+  voiceRainforestEra = loadSound('./assets/rainforestEra.wav');
+  voiceIndustrialEra = loadSound('./assets/industrialEra.wav');
+  voiceCurrentEra = loadSound('./assets/currentEra.wav');
+  voiceFutureEra = loadSound('./assets/nearFutureEra.wav');
+  voicePostHumanEra = loadSound('./assets/posthumanEra.wav');
+  voicePostHumanEra2 = loadSound('./assets/posthumanEra2.mp3');
+  voiceConclusion = loadSound('./assets/conclusion.wav');
+  voiceWallBreak = loadSound('./assets/fourthWallBreak.wav');
+  voiceWrongTurn1 = loadSound('./assets/wrongTurn.wav');
+  voiceWrongTurn2 = loadSound('./assets/wrongTurn2.wav');
+  voiceSubsequentTurn = loadSound('./assets/subsequentTurn.wav');
 }
 
 function setup() {
@@ -58,13 +58,13 @@ function setup() {
   startButton.mousePressed(buttonChange);
   startButton.addClass('buttonStyling');
 
-  leftArrow = createImg('/assets/leftArrow.png', 'arrow pointing left');
+  leftArrow = createImg('./assets/leftArrow.png', 'arrow pointing left');
   leftArrow.position(width/2 - 306 - 30, 50);
   leftArrow.mousePressed(wheelLeftTurn);
   leftArrow.addClass('rightArrow');
   leftArrow.hide();
 
-  rightArrow = createImg('/assets/rightArrow.png', 'arrow pointing right');
+  rightArrow = createImg('./assets/rightArrow.png', 'arrow pointing right');
   rightArrow.position(width/2 + 30, 50);
   rightArrow.mousePressed(wheelRightTurn);
   rightArrow.addClass('rightArrow');
