@@ -1,6 +1,6 @@
 @font-face {
   font-family: monument;
-  src: url('assets/monumentb.otf') format("opentype");
+  src: url('./assets/monumentb.otf') format("opentype");
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   background-color: #000;
-  cursor: url('/assets/bodycursor.png'), auto;
+  cursor: url('./assets/bodycursor.png'), auto;
   animation: fadein 5.85s;
   -webkit-animation: fadein 5.85s;
   -moz-animation: fadein 5.85s;
@@ -26,10 +26,9 @@ body {
 }
 
 .rightArrow:hover {
-  cursor: pointer;
   transform: translateY(-0.50em);
   transition: 400ms all ease-in-out;
-  cursor: url('/assets/pointercursor.png'), pointer;
+  cursor: url('./assets/pointercursor.png'), pointer;
 }
 
 .buttonStyling {
@@ -49,7 +48,7 @@ body {
 .buttonStyling:hover {
   filter: drop-shadow(4px 5px 5px #41505e);
   transform: translateY(-2px);
-  cursor: url('/assets/pointercursor.png'), pointer;
+  cursor: url('./assets/pointercursor.png'), pointer;
 }
 
 @-webkit-keyframes fadein { from {opacity:0} to {opacity:1} }
