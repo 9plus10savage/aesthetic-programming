@@ -88,7 +88,7 @@ function draw() {
   wheelRotate();
   wheelZoomOut();
   firstState();
-  //ambience();
+  ambience();
 
   playSound(1, voiceIndustrialEra, 1);
   playSound(2, voiceCurrentEra, 2);
