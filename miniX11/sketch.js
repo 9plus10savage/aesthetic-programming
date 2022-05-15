@@ -230,6 +230,8 @@ function ambience() {
   nearFutureAmb.setVolume(0.03);
   posthumanAmb.setVolume(0.3);
 
+  /*
+
   if (startAlpha < 0 && stateTracker == 0 && !rainforestAmb.isPlaying()) {
     rainforestAmb.play();
   } else if (stateTracker == 1 && !industrialAmb.isPlaying()) {
@@ -239,6 +241,8 @@ function ambience() {
   } else if (stateTracker == 3 && !nearFutureAmb.isPlaying()) {
     nearFutureAmb.play();
   }
+
+  */
 
   if (isRotating) {
     rainforestAmb.stop();
