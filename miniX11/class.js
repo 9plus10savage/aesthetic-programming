@@ -2,7 +2,7 @@ class Star {
 	constructor() {
 		this.x = random(width);
 		this.y = random(height);
-		this.size = random(0.25, 1);
+		this.size = random(0.25, 0.75);
 		this.t = random(TAU);
 	}
 
